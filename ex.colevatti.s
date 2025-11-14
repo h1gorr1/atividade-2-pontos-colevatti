@@ -1,10 +1,10 @@
-#63. Criar um algoritmo que imprima a soma de n primeiros termos da série de fibonacci (2 < n < 40 e, caso não seja, deve ser novamente solicitado).
+#63. Criar um algoritmo que imprima a soma de n primeiros termos da sÃ©rie de fibonacci (2 < n < 40 e, caso nÃ£o seja, deve ser novamenteÂ solicitado).
 .data
 	n: .asciiz "Digite O Valor De N: "
-	total: .asciiz "O Total é :  "
-	lembrete: .asciiz "(Lembrando que a sequencia começa a partir de 3)"
-	invalido: .asciiz "Valor Inválido, Tente Novamente! "
-	somando: .asciiz "Somando o total fica: "
+	total: .asciiz "O Total Ã© :  "
+	lembrete: .asciiz "  (SequÃªncia De Fibonacci Lembrando que a sequencia comeÃ§a a partir de 3)"
+	invalido: .asciiz "Valor InvÃ¡lido, Tente Novamente! "
+	somando: .asciiz "Somando o final de cada Sequencia  o total fica: "
 	linha: .asciiz "\n"
 	espaco: .asciiz " + "
 	igual: .asciiz " = "
@@ -23,8 +23,8 @@ main:
 	li $t2,40
 	
 	verificar_n:
-	ble $t0,$t1,valor_invalido #Se Menor Ou Igual A 2, Vá Para Valor Inválido.
-	bge $t0,$t2,valor_invalido #Se Maior Ou Igual a 40,vá também para valor inválido.
+	ble $t0,$t1,valor_invalido #Se Menor Ou Igual A 2, VÃ¡ Para Valor InvÃ¡lido.
+	bge $t0,$t2,valor_invalido #Se Maior Ou Igual a 40,vÃ¡ tambÃ©m para valor invÃ¡lido.
 	j calculo_fibonacci
 	
 	valor_invalido:
